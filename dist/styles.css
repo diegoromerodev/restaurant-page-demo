@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --main: #f8edeb;
+    --black: #2d2e32;
+}
+
+body {
+    background-color: var(--main);
+    font-family: Karla, sans-serif;
+}
+
+#header {
+    background-color: transparent;
+    height: 4em;
+}
+
+#nav-menu {
+    display: flex;
+    color: var(--black);
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--black);
+    height: 100%;
+}
+
+#logo {
+    font-size: 2em;
+    padding-left: 20px;
+    font-family: Vollkorn, serif;
+}
+
+#nav-menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    position: relative;
+    height: 100%;
+}
+
+#nav-menu li {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid var(--black);
+    height: 100%;
+    cursor: pointer;
+}
+
+#nav-menu li:hover, .current {
+    background-color: var(--black);
+    color: var(--main);
+}
+
+#content {
+    height: calc(100vh - 4em);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#intro img {
+    width: 50%;
+}
+
+#intro h3 {
+    font-size: 5em;
+}
+
+.highlight {
+    background-color: var(--black);
+    padding: 0 15px;
+    color: var(--main);
+}
+
+/* locations */
+#locations ul {
+    list-style: none;
+    font-size: 2em;
+    text-align: center;
+}
+
+#locations object {
+    height: 30vh;
+}
+
+/* contact */
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contact object {
+    height: 30vh;
+}
+
+#contact h3 {
+    font-size: 5em;
+}
+
+@media (max-width: 1260px){
+    #content h3 {
+        font-size: 2em;
+    }
+    #content ul {
+        font-size: 1.5em;
+    }
+    object {
+        width: 10vh;
+    }
+}
